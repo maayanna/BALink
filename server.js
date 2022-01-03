@@ -1,21 +1,21 @@
-console.log("Hello")
+// console.log("Hello")
 
-const express = require( 'express' )
-const app     = express()
-const port    = process.env.PORT || 3000
+const express = require("express");
+
+const app = express();
+
+let port    = process.env.PORT || 3000
 
 app.get( '/' ,(req, res) => {
     res.type( 'text/plain' )
-    res.send( 'Server Expresso ☕' )
+    res.send( 'My Server' )
 })
-app.get( '/about', ( req, res ) => {
-    res.type( 'text/plain' )
-    res.send( 'Server Expresso ☕ About')
-})
-app.use( ( req, res ) => {
-    res.type( 'text/plain' )
-    res.status( 404 )
-    res.send('404 Not found ☕_☕')
-})
-app.listen( port ,
-    () => console.log(`Expresso ☕ is on Port ${ port } Ctrl + C to Stop `) )
+
+
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: false }));
+
+app.use('users', require('./routes/api/users'));
+
+app.listen( port ,() => console.log(`Server started on port  ${ port } Ctrl + C to Stop `) )
