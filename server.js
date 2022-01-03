@@ -8,9 +8,13 @@ const app = express();
 
 let port    = process.env.PORT || 3000;
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+
 app.get( '/' ,(req, res) => {
     res.type( 'text/plain' )
-    res.send( 'My Server' )
+    res.send( 'My Server hello la police' )
 })
 
 const users = require('./routes/api/users');
@@ -18,6 +22,12 @@ app.use('/users', users);
 
 const products = require('./routes/api/products')
 app.use('/products', products)
+
+const translation = require('./routes/api/translation')
+app.use('/translations', translation)
+
+const login = require('./routes/api/login')
+app.use('/login', login)
 
 
 

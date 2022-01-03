@@ -1,4 +1,3 @@
-
 const express = require("express");
 
 const router = express.Router();
@@ -10,16 +9,13 @@ let products = require("../../Products");
 
 // Get all products
 router.get("/", (req, res) => {
-
     res.json(products);
 
 });
 
 // Get product by id
 router.get('/:id', (req, res) => {
-
     const found = products.some(product => product.id === parseInt(req.params.id));
-
     if (found) {
 
         res.json(products.filter(product => product.id === parseInt(req.params.id)));
@@ -33,9 +29,10 @@ router.get('/:id', (req, res) => {
 
 
 // Create a new product
-router.post("/", (req, res) => {
+router.post('/', (req, res) => {
 
-    const newProduct = {
+    let newProduct;
+    newProduct = {
 
         id: uuid.v4(),
 
@@ -44,60 +41,40 @@ router.post("/", (req, res) => {
     };
 
 
-
     if (!newProduct.name || !newProduct.id) {
-
         return res.sendStatus(400);
-
     }
 
-
-
     products.push(newProduct);
-
     res.json(products);
-
 });
 
 
 // Modify data for the product with a given id
 router.put("/:id", (req, res) => {
+    const updateProduct = req.body;
 
-    const found = products.some(product => product.id === parseInt(req.params.id));
+    let product = products.find(p => p.id === parseInt(req.params.id))
 
-
-
-    if (found) {
-
-        const updateProduct = req.body;
-
-        products.forEach(product => {
-
-            if (product.id === parseInt(req.params.id)) {
-
-                product.name = updateProduct.name ? updateProduct.name : product.name;
-
-                res.json({ msg: "User updated", product});
-
-            }
-
-        });
-
-    } else {
-
+    if (!product) {
         res.sendStatus(400);
-
+        return
     }
+
+    product.name = updateProduct.name ? updateProduct.name : product.name;
+    res.json({msg: "User updated", product});
 
 });
 
 
 // Delete a product with a given id
-router.delete("/products/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
 
     const found = products.some(product => product.id === parseInt(req.params.id));
 
-
+    // delete products[key]
+    //
+    // products[key] = product
 
     if (found) {
 
