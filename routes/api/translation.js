@@ -1,3 +1,8 @@
+/**
+ * API for a translation route
+ * @type {e | (() => Express)}
+ */
+
 const express = require("express");
 
 const router = express.Router();

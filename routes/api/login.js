@@ -1,3 +1,7 @@
+/**
+ * API for a login route
+ * @type {e | (() => Express)}
+ */
 
 const express = require("express");
 

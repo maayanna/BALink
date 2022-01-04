@@ -1,5 +1,5 @@
 /**
- * My server
+ * My server as my main program
  * @type {e | (() => Express)}
  */
 
