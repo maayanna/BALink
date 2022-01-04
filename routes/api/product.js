@@ -4,21 +4,21 @@ const router = express.Router();
 
 const uuid = require("uuid");
 
-let products = require("../../Products");
+let product = require("../../data/product");
 
 
-// Get all products
+// Get all product
 router.get("/", (req, res) => {
-    res.json(products);
+    res.json(product);
 
 });
 
 // Get product by id
 router.get('/:id', (req, res) => {
-    const found = products.some(product => product.id === parseInt(req.params.id));
+    const found = product.some(product => product.id === parseInt(req.params.id));
     if (found) {
 
-        res.json(products.filter(product => product.id === parseInt(req.params.id)));
+        res.json(product.filter(product => product.id === parseInt(req.params.id)));
 
     } else {
 
@@ -45,8 +45,8 @@ router.post('/', (req, res) => {
         return res.sendStatus(400);
     }
 
-    products.push(newProduct);
-    res.json(products);
+    product.push(newProduct);
+    res.json(product);
 });
 
 
@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
 router.put("/:id", (req, res) => {
     const updateProduct = req.body;
 
-    let product = products.find(p => p.id === parseInt(req.params.id))
+    let product = product.find(p => p.id === parseInt(req.params.id))
 
     if (!product) {
         res.sendStatus(400);
@@ -70,21 +70,21 @@ router.put("/:id", (req, res) => {
 // Delete a product with a given id
 router.delete("/:id", (req, res) => {
 
-    const found = products.some(product => product.id === parseInt(req.params.id));
+    const found = product.some(product => product.id === parseInt(req.params.id));
 
-    // delete products[key]
+    // delete product[key]
     //
-    // products[key] = product
+    // product[key] = product
 
     if (found) {
 
-        products = products.filter(product => product.id !== parseInt(req.params.id))
+        product = product.filter(product => product.id !== parseInt(req.params.id))
 
         res.json({
 
             msg: "User deleted",
 
-            products
+            products: product
 
         });
 

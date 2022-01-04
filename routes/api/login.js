@@ -3,7 +3,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const users = require("../../Users");
+const users = require("../../data/user");
 
 const errorFunc = (res) => {
     res.sendStatus(401);

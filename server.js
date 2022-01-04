@@ -17,10 +17,10 @@ app.get( '/' ,(req, res) => {
     res.send( 'My Server hello la police' )
 })
 
-const users = require('./routes/api/users');
+const users = require('./routes/api/user');
 app.use('/users', users);
 
-const products = require('./routes/api/products')
+const products = require('./routes/api/product')
 app.use('/products', products)
 
 const translation = require('./routes/api/translation')

@@ -4,7 +4,7 @@ const router = express.Router();
 
 const uuid = require("uuid");
 
-let language = require("../../data/language");
+let language = require("../../data/translation");
 
 
 // Get all products

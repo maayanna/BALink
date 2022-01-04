@@ -1,4 +1,4 @@
-const language = {
+const translation = {
     en: {
         fridge: 'fridge',
         sofa: 'sofa',
@@ -11,4 +11,4 @@ const language = {
     }
 }
 
-module.exports = language;
+module.exports = translation;
