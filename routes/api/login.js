@@ -5,24 +5,37 @@ const router = express.Router();
 
 const users = require("../../data/user");
 
-const errorFunc = (res) => {
-    res.sendStatus(401);
+/**
+ * Sending a bad request
+ * @param res
+ * @param num
+ */
+const errorFunc = (res, num) => {
+    res.sendStatus(num);
 }
 
-// Get all users
+/**
+ * Check the login with given username (email) and password
+ */
 router.get("/:email?/:password?", (req, res) => {
     const email = req.params.email;
     const password = req.params.password;
 
     if (!email || !password ) {
-        errorFunc(res);
+        errorFunc(res, 400);
         return
     }
 
-    const user = users.find(u => u.email === email && u.password === password)
-    user ?
-        res.json({message: 'Hello ' + user.name}) :
-        errorFunc(res)
+    // Need to find by email not by id
+    const user = Object.keys(users).find(key => users[key].password === password && users[key].email === email);
+    // const user = users.find(u => u.email === email && u.password === password); // Check if exist
+
+    if(user){
+        res.json({message: 'Hello ' + users[user].name + " " + users[user].lastName});
+    }
+    else{
+        errorFunc(res, 401);
+    }
 
 });
 

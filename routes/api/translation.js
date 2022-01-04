@@ -2,15 +2,23 @@ const express = require("express");
 
 const router = express.Router();
 
-const uuid = require("uuid");
-
-let language = require("../../data/translation");
+let translation = require("../../data/translation");
 
 
-// Get all products
+/**
+ * Display a translation given the translation parameter
+ */
 router.get("/:lang?", (req, res) => {
+    // By default, we give the english translation if no parameter
     const lang = req.params.lang ? req.params.lang : 'en';
-    res.json(language[lang]);
+    if(lang in translation){ // In my translation dic
+        res.json(translation[lang]);
+    }
+    else{
+        res.json(translation["en"]); // By default, if bad request
+        // res.sendStatus(400);
+    }
+
 });
 
 module.exports = router;
