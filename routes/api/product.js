@@ -7,82 +7,84 @@ const uuid = require("uuid");
 let product = require("../../data/product");
 
 
-// Get all product
+/**
+ * Display all products
+ */
 router.get("/", (req, res) => {
     res.json(product);
 
 });
 
-// Get product by id
+
+/**
+ * Display product by id
+ */
 router.get('/:id', (req, res) => {
-    const found = product.some(product => product.id === parseInt(req.params.id));
-    if (found) {
 
-        res.json(product.filter(product => product.id === parseInt(req.params.id)));
-
-    } else {
-
+    if (req.params.id in product){ // If the user is existing
+        res.json(product[req.params.id]);
+    }
+    else{
         res.sendStatus(400);
-
     }
 })
 
 
-// Create a new product
+/**
+ * Create a new product
+ */
 router.post('/', (req, res) => {
 
-    let newProduct;
-    newProduct = {
+    let newId = uuid.v4();
+    let newName = req.body.name;
 
-        id: uuid.v4(),
-
-        name: req.body.name
-
-    };
-
-
-    if (!newProduct.name || !newProduct.id) {
+    if (!newName || !newId) {
         return res.sendStatus(400);
     }
 
-    product.push(newProduct);
-    res.json(product);
+    product[newId] = {
+
+        id: newId,
+
+        name: newName
+
+
+    };
+    res.json({msg: "Product created", product});
 });
 
 
-// Modify data for the product with a given id
+/**
+ * Modify data for the product with a given id
+ */
 router.put("/:id", (req, res) => {
+
     const updateProduct = req.body;
 
-    let product = product.find(p => p.id === parseInt(req.params.id))
 
-    if (!product) {
+    if (!product[req.params.id] || !updateProduct.name) {
         res.sendStatus(400);
         return
     }
 
-    product.name = updateProduct.name ? updateProduct.name : product.name;
-    res.json({msg: "User updated", product});
+    product[req.params.id].name = updateProduct.name;
+    res.json({msg: "Product updated", product});
 
 });
 
 
-// Delete a product with a given id
+/**
+ * Delete a product with a given id
+ */
 router.delete("/:id", (req, res) => {
 
-    const found = product.some(product => product.id === parseInt(req.params.id));
+    if (req.params.id in product) {
 
-    // delete product[key]
-    //
-    // product[key] = product
-
-    if (found) {
-
-        product = product.filter(product => product.id !== parseInt(req.params.id))
+        delete product[req.params.id];
 
         res.json({
 
-            msg: "User deleted",
+            msg: "Product deleted",
 
             products: product
 

@@ -1,5 +1,5 @@
 /**
- * The user's documentation is a dictionary using the key as the id and the value as a dictionary with all
+ * The product's documentation is a dictionary using the key as the id and the value as a dictionary with all
  * the information needed
  * @type {{"1": {name: string, id: number}, "2": {name: string, id: number}, "3": {name: string, id: number}}}
  */
