@@ -28,7 +28,7 @@ router.get("/:email?/:password?", (req, res) => {
 
     // Need to find by email not by id
     const user = Object.keys(users).find(key => users[key].password === password && users[key].email === email);
-    // const user = users.find(u => u.email === email && u.password === password); // Check if exist
+    // Check if exist
 
     if(user){
         res.json({message: 'Hello ' + users[user].name + " " + users[user].lastName});
