@@ -1,0 +1,1558 @@
+{
+	"info": {
+		"_postman_id": "c7c39489-14c1-4063-9ec4-641679373606",
+		"name": "BaLink",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:3000",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000",
+							"host": [
+								"localhost"
+							],
+							"port": "3000"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-FM+HNe/9G51+exbApTl7kTMQK8o\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 16:28:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "My Server hello"
+				}
+			]
+		},
+		{
+			"name": "get users display all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get users display all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "382"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17e-ywNI1YbWSVKU5KpVAvgz+OtsHu8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 16:28:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"1\": {\n        \"id\": 1,\n        \"name\": \"John\",\n        \"lastName\": \"Cohen\",\n        \"email\": \"john@gmail.com\",\n        \"password\": \"12345678\"\n    },\n    \"2\": {\n        \"id\": 2,\n        \"name\": \"David\",\n        \"lastName\": \"Smith\",\n        \"email\": \"smith@gmail.com\",\n        \"password\": \"password\"\n    },\n    \"3\": {\n        \"id\": 3,\n        \"name\": \"Chris\",\n        \"lastName\": \"Marciano\",\n        \"email\": \"chris@gmail.com\",\n        \"password\": \"helloword\"\n    },\n    \"4\": {\n        \"id\": 4,\n        \"name\": \"Jack\",\n        \"lastName\": \"Levy\",\n        \"email\": \"jack@gmail.com\",\n        \"password\": \"password55\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "user by id id=1 valid id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user by id id=1 valid id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"58-lOUFsmiW6Ha1ZUS/J7y8DbQ/nEY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:14:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"John\",\n    \"lastName\": \"Cohen\",\n    \"email\": \"john@gmail.com\",\n    \"password\": \"12345678\"\n}"
+				}
+			]
+		},
+		{
+			"name": "user by id id=5 invalid id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user by id id=5 invalid id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "11"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 16:28:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Bad Request"
+				}
+			]
+		},
+		{
+			"name": "get products display all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get products display all products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "87"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"57-LwlYU/lEIfibquJBsviYxQhUhSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:16:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"1\": {\n        \"id\": 1,\n        \"name\": \"frigo\"\n    },\n    \"2\": {\n        \"id\": 2,\n        \"name\": \"canape\"\n    },\n    \"3\": {\n        \"id\": 3,\n        \"name\": \"chaise\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get products by id id=2 valid id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get products by id id=2 valid id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-3iSAknzajn8lvNjVulCtNjFyYt0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:16:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"canape\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get products by id id=6 invalid id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get products by id id=6 invalid id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products/6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"6"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "11"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:17:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Bad Request"
+				}
+			]
+		},
+		{
+			"name": "post product create new product table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"table\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "post product create new product table",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"table\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"df-KL0u8oLsUpfv4LzLJ2phJ2+9KTA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:18:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Product created\",\n    \"product\": {\n        \"1\": {\n            \"id\": 1,\n            \"name\": \"frigo\"\n        },\n        \"2\": {\n            \"id\": 2,\n            \"name\": \"canape\"\n        },\n        \"3\": {\n            \"id\": 3,\n            \"name\": \"chaise\"\n        },\n        \"4c9d6351-5b02-4479-94b6-b6af6baf5510\": {\n            \"id\": \"4c9d6351-5b02-4479-94b6-b6af6baf5510\",\n            \"name\": \"table\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get all products after creating one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all products after creating one",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "187"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bb-Xml20kjIBMEHFOr9pgRldnmr0dU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:19:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"1\": {\n        \"id\": 1,\n        \"name\": \"frigo\"\n    },\n    \"2\": {\n        \"id\": 2,\n        \"name\": \"canape\"\n    },\n    \"3\": {\n        \"id\": 3,\n        \"name\": \"chaise\"\n    },\n    \"4c9d6351-5b02-4479-94b6-b6af6baf5510\": {\n        \"id\": \"4c9d6351-5b02-4479-94b6-b6af6baf5510\",\n        \"name\": \"table\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "put product modify product by id valid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"bed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "put product modify product by id valid",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"bed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"dd-ELx2Kpvdz8YBnO5D96fBqwe0dwE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:20:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Product updated\",\n    \"product\": {\n        \"1\": {\n            \"id\": 1,\n            \"name\": \"bed\"\n        },\n        \"2\": {\n            \"id\": 2,\n            \"name\": \"canape\"\n        },\n        \"3\": {\n            \"id\": 3,\n            \"name\": \"chaise\"\n        },\n        \"4c9d6351-5b02-4479-94b6-b6af6baf5510\": {\n            \"id\": \"4c9d6351-5b02-4479-94b6-b6af6baf5510\",\n            \"name\": \"table\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get all products after modifying one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all products after modifying one",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "87"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"57-LwlYU/lEIfibquJBsviYxQhUhSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 16:28:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"1\": {\n        \"id\": 1,\n        \"name\": \"frigo\"\n    },\n    \"2\": {\n        \"id\": 2,\n        \"name\": \"canape\"\n    },\n    \"3\": {\n        \"id\": 3,\n        \"name\": \"chaise\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "put product modify product by id invalid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"8"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "put product modify product by id invalid",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products/8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"8"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "11"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:21:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Bad Request"
+				}
+			]
+		},
+		{
+			"name": "delete product by valid id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete product by valid id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "196"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c4-+NrAscS+3jTWm7PXT26+i+XU6uw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:22:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Product deleted\",\n    \"products\": {\n        \"2\": {\n            \"id\": 2,\n            \"name\": \"canape\"\n        },\n        \"3\": {\n            \"id\": 3,\n            \"name\": \"chaise\"\n        },\n        \"4c9d6351-5b02-4479-94b6-b6af6baf5510\": {\n            \"id\": \"4c9d6351-5b02-4479-94b6-b6af6baf5510\",\n            \"name\": \"table\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get products after delete one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get products after delete one",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "159"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9f-1PuOz1cu7Bu9exsgj0/kdEoqq9w\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:22:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"2\": {\n        \"id\": 2,\n        \"name\": \"canape\"\n    },\n    \"3\": {\n        \"id\": 3,\n        \"name\": \"chaise\"\n    },\n    \"4c9d6351-5b02-4479-94b6-b6af6baf5510\": {\n        \"id\": \"4c9d6351-5b02-4479-94b6-b6af6baf5510\",\n        \"name\": \"table\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "delete product with invalid id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete product with invalid id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"5"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "11"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:22:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Bad Request"
+				}
+			]
+		},
+		{
+			"name": "get translation with parameter fr for french",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/translations/fr",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"translations",
+						"fr"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get translation with parameter fr for french",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/translations/fr",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"translations",
+								"fr"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"32-I0OZULGb0YKc6URviuyC2hi95ok\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:23:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fridge\": \"frigo\",\n    \"sofa\": \"canape\",\n    \"table\": \"table\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get translation with no parameter -> english default",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/translations",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"translations"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get translation with no parameter -> english default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/translations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"translations"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-x8wTRfIgeDczUOuMSPH2DO8bIR0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:24:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fridge\": \"fridge\",\n    \"sofa\": \"sofa\",\n    \"table\": \"table\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get translation with bad parameter -> english default",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/translations/he",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"translations",
+						"he"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get translation with bad parameter -> english default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/translations/he",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"translations",
+								"he"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-x8wTRfIgeDczUOuMSPH2DO8bIR0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:24:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fridge\": \"fridge\",\n    \"sofa\": \"sofa\",\n    \"table\": \"table\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get login with mail as username and password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/login/john@gmail.com/12345678",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login",
+						"john@gmail.com",
+						"12345678"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get login with mail as username and password",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/login/john@gmail.com/12345678",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login",
+								"john@gmail.com",
+								"12345678"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-jF4CsRzRV3ssk31prxbLzspCYqU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:25:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Hello John Cohen\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get login with bad parameter(password)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/login/john@gmail.com/123456789",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login",
+						"john@gmail.com",
+						"123456789"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get login with bad parameter(password)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/login/john@gmail.com/123456789",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login",
+								"john@gmail.com",
+								"123456789"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c-dAuDFQrdjS3hezqxDTNgW7AOlYk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:26:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Unauthorized"
+				}
+			]
+		},
+		{
+			"name": "get login with no parameter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get login with no parameter",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "11"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Jan 2022 10:26:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Bad Request"
+				}
+			]
+		}
+	]
+}
